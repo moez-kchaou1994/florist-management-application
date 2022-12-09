@@ -1,4 +1,4 @@
-A florist wants to develop a web service that allows him to:
+
 
 Add a flower
 
