@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+<h3>Modifier Fleure</h3>
+<div class="container">
+    <form (ngSubmit)="modiffleure()">
+        <div class="form-row">
+            <div class="col-md-6 mb-3"><label>Numero fleure</label>
+             <input type="text" class="form-control" name="num_fleure"
+             [(ngModel)]="fleure.num_fleure" readonly>   
+            </div>
+            <div class="col-md-6 mb-3"><label>couleur fleure</label>
+                <input type="text" class="form-control" 
+                name="couleur_fleure" [(ngModel)]="fleure.couleur_fleure">
+            </div>
+        </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3"><label>Type fleure</label>
+                    <input type="text" class="form-control"  name="type_fleure"  [(ngModel)]="fleure.type_fleure">
+                </div>
+                <div class="col-md-6 mb-3"><label>Nom fleure</label>
+                    <input type="text" class="form-control"  name="nom_fleure"  [(ngModel)]="fleure.nom_fleure">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3"><label>Prix fleure</label>
+                    <input type="number" class="form-control"  name="prix_f"  [(ngModel)]="fleure.prix_f">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <button type="submit" class="btn btn-info">Modifier</button>
+                </div>
+            </div>
+        
+    </form>
+</div>

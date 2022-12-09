@@ -1,0 +1,79 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="modal-header">
+        <h4 class="mb-0">Liste fleure</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="row justify-content-between">
+                    <div class="col-10">
+                        <div class="form-group mb-2">
+                            <div class="d-flex">
+                               
+                                
+                                <button type="button" class="btn btn-success  ml-2" routerLink="/addfleure">Add fleure</button>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table row-border hover mb-0">
+                    <thead>
+                        <tr>
+                            <th class="cell-article">
+                                Numero fleure
+                            </th>
+                            <th class="cell-g">
+                                Nom fleure
+                            </th>
+                            <th class="cell-date">
+                                Couleur fleure
+                            </th>
+                            <th class="cell-access">
+                                Prix fleure
+                            </th>
+                            <th class="cell-agent">
+                               
+                            </th>
+                            <th class="cell-view">
+                                
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="custom-scroll">
+                        <tr *ngFor="let row of b">
+                            <td class="cell-article">
+                              {{row.num_fleure}}
+                            </td>
+                            <td class="cell-g">
+                              {{row.nom_fleure}}
+                            </td>
+                            <td class="cell-date">
+                                {{row.couleur_fleure}}
+                            </td>
+                            <td class="cell-access">
+                                {{row.prix_f}} 
+                            </td>
+                            <td class="cell-agent">
+                                <input type="button" value="Modifier" class="btn btn-warning" [routerLink] ="['/modiffleure/',row.num_fleure]">
+                            </td>
+                            <td class="cell-view">
+                                <input type="button" value="Supprimer" class="btn btn-danger" (click)="deletefleure(row.num_fleure)">
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+  
+</div>
+
+

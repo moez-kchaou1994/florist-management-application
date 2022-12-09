@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+<h3>Modifier Bouquet</h3>
+<div class="container">
+    <form (ngSubmit)="modifbouquet()">
+        <div class="form-row">
+            <div class="col-md-6 mb-3"><label>Numero bouquet</label>
+             <input type="text" class="form-control" name="num_bouquet"
+             [(ngModel)]="bouquet.num_bouquet" readonly>   
+            </div>
+            <div class="col-md-6 mb-3"><label>form bouquet</label>
+                <input type="text" class="form-control" 
+                name="form_bouquet" [(ngModel)]="bouquet.form_bouquet">
+            </div>
+        </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3"><label>Nom Bouquet</label>
+                    <input type="text" class="form-control"  name="nom_bouquet"  [(ngModel)]="bouquet.nom_bouquet">
+                </div>
+                
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3"><label>Prix bouquet</label>
+                    <input type="number" class="form-control"  name="prix_b"  [(ngModel)]="bouquet.prix_b">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <button type="submit" class="btn btn-info">Modifier</button>
+                </div>
+            </div>
+        
+    </form>
+</div>
+

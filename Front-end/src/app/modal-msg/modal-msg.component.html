@@ -1,0 +1,25 @@
+<div class="modal-content" style="max-width: 335px;">
+    <div [class]="'modal-header ' + type">
+        <h4 class="mb-0">{{ title }}</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-12">
+                {{ msg }}
+            </div>
+            <div class="col-12">
+                {{ msg2 }}
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end">
+                <button *ngIf="nature==='msg'" [class]="'btn btn-' + type" (click)="confirm()">OK</button>
+                <button *ngIf="nature==='msg2'" [class]="'btn btn-' + type" (click)="confirm()">OK</button>
+                <button *ngIf="nature==='confirm'" [class]="'btn btn-' + type" (click)="confirm()">Oui</button>
+                <button *ngIf="nature==='confirm'" [class]="'btn btn-default'" (click)="reject()">Non</button>
+            </div>
+        </div>
+    </div>
+</div>

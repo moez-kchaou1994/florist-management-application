@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+<h3>Ajout Fleure</h3>
+<div class="container">
+    <form (ngSubmit)="addfleure()">
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+             <input type="text" class="form-control" placeholder="numero fleure" name="num_fleure"
+             [(ngModel)]="fleure.num_fleure">   
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="nom fleure"
+                name="nom_fleure" [(ngModel)]="fleure.nom_fleure">
+            </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control" placeholder="couleur fleure"
+                name="couleur_fleure" [(ngModel)]="fleure.couleur_fleure">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control" placeholder="type fleure"
+                    name="type_fleure" [(ngModel)]="fleure.type_fleure">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <input type="number" class="form-control" placeholder="prix fleure" name="prix_f"  [(ngModel)]="fleure.prix_f">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <button type="submit" class="btn btn-success">submit</button>
+                </div>
+            </div>
+     
+    </form>
+</div>

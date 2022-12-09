@@ -1,0 +1,76 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="modal-header">
+        <h4 class="mb-0">Liste Commande</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="row justify-content-between">
+                    <div class="col-10">
+                        <div class="form-group mb-2">
+                            <div class="d-flex">
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table row-border hover mb-0">
+                    <thead>
+                        <tr>
+                            <th class="cell-article">
+                                N° commande
+                            </th>
+                            <th class="cell-g">
+                                Etat commande
+                            </th>
+                            <th class="cell-date">
+                                Total commande
+                            </th>
+                            <th class="cell-access">
+                                Fleures
+                            </th>
+                            <th class="cell-agent">
+                                Bouquets
+                            </th>
+                            <th class="cell-view">
+                                Prix Bouquets
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="custom-scroll">
+                        <tr *ngFor="let row of c">
+                            <td class="cell-article">
+                              {{row.num_com}}
+                            </td>
+                            <td class="cell-g">
+                              {{row.etat_c}}
+                            </td>
+                            <td class="cell-date">
+                                {{row.total_c}}
+                            </td>
+                            <td class="cell-access">
+                               {{f}}
+                            </td>
+                            <td class="cell-agent">
+                                {{b}}
+                            </td>
+                            <td class="cell-view">
+                                {{b1}}
+                               
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+  
+</div>
+

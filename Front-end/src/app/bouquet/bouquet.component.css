@@ -1,0 +1,97 @@
+.container{padding-top: 90px;}
+.modal-content {
+    background-color: transparent;
+}
+
+.modal-header {
+    background-color: #D32F2F;
+    color: #fff;
+    border: none;
+}
+
+.modal-footer {
+    border: none;
+    background-color: #374046;
+}
+
+.modal-body {
+    background-color: #374046;
+    /* padding: 5px; */
+}
+
+
+table {
+    background-color: white;
+}
+
+thead, tbody {
+    display: block;
+}
+
+thead>tr, tbody>tr {
+    width: 100%;
+    display: block;
+}
+
+tbody>tr {
+    /* background-color: white; */
+    margin-bottom: 5px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 15px rgb(0 0 0 / 10%);
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+tbody>tr:first-child {
+    margin-top: 5px;
+}
+
+thead>tr {
+    padding-right: 2px;
+}
+
+tbody {
+    height: calc(100vh - 275px);
+    /* Just for the demo          */
+    overflow-y: auto;
+    /* Trigger vertical scroll    */
+    overflow-x: hidden;
+    /* Hide the horizontal scroll */
+}
+
+td {
+    border-top: none;
+}
+
+.cell-article {
+    width: 100px;
+    display: inline-block;
+}
+
+.cell-g{
+    /*width: calc(100% - 490px);*/
+    width:200px;
+    display: inline-block;
+}
+
+.cell-date{
+    width: 200px;
+    display: inline-block;
+}
+
+.cell-access {
+    width: 200px;
+    display: inline-block;
+}
+.cell-agent {
+    width: 120px;
+    display: inline-block;
+}
+.cell-view{
+    width:250px;
+    display: inline-block;
+}
+tr.selected {
+    background-color: #c6def3;
+}

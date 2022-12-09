@@ -1,0 +1,160 @@
+<app-menuclient></app-menuclient>
+<div class="container">
+    <div class="modal-header">
+        <h4 class="mb-0">Liste fleure</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="row justify-content-between">
+                    <div class="col-10">
+                        <div class="form-group mb-2">
+                            <div class="d-flex">
+                              
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table row-border hover mb-0">
+                    <thead>
+                        <tr>
+                            <th class="cell-article">
+                                Numero fleure
+                            </th>
+                            <th class="cell-g">
+                                Nom fleure
+                            </th>
+                            <th class="cell-date">
+                                Couleur fleure
+                            </th>
+                            <th class="cell-access">
+                               Type Fleure
+                            </th>
+                            <th class="cell-agent">
+                                Prix fleure
+                            </th>
+                            <th class="cell-view">
+                                
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="custom-scroll">
+                        <tr *ngFor="let row of f">
+                            <td class="cell-article">
+                              {{row.num_fleure}}
+                            </td>
+                            <td class="cell-g">
+                              {{row.nom_fleure}}
+                            </td>
+                            <td class="cell-date">
+                                {{row.couleur_fleure}}
+                            </td>
+                            <td class="cell-access">
+                                {{row.type_fleure}}
+                            </td>
+                            <td class="cell-agent">
+                                {{row.prix_f}} 
+                            </td>
+                            <td class="cell-view">
+                                <input type="button" value="Ajouter fleure" (click)="commande_f(row.num_fleure)" class="btn btn-info" >
+                            </td>
+                        </tr>
+                        <input type="button" value="la somme general de votre commande est?" (click)="displaytotal()" class="ml-3 mt-3 btn btn-success" >
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+  
+</div>
+<div class="container">
+    <div class="modal-header">
+        <h4 class="mb-0">Liste bouquet</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="row justify-content-between">
+                    <div class="col-10">
+                        <div class="form-group mb-2">
+                            <div class="d-flex">
+                               
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table row-border hover mb-0">
+                    <thead>
+                        <tr>
+                            <th class="cell-article">
+                                Numero bouquet
+                            </th>
+                            <th class="cell-g">
+                                Nom bouquet
+                            </th>
+                            <th class="cell-date">
+                                form bouquet
+                            </th>
+                            <th class="cell-access">
+                                Prix bouquet
+                            </th>
+                            <th class="cell-agent">
+                               
+                            </th>
+                            <th class="cell-view">
+                            
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="custom-scroll">
+                        <tr *ngFor="let row of b">
+                            <td class="cell-article">
+                              {{row.num_bouquet}}
+                            </td>
+                            <td class="cell-g">
+                              {{row.nom_bouquet}}
+                            </td>
+                            <td class="cell-date">
+                                {{row.form_bouquet}}
+                            </td>
+                            <td class="cell-access">
+                                {{row.prix_b}} 
+                            </td>
+                            <td class="cell-agent">
+                               
+                            </td>
+                            <td class="cell-view">
+                               
+                                <input type="button" value="Ajouter Bouquet" (click)="commande_b(row.num_bouquet)" class="btn btn-info" >
+                            </td>
+                        </tr>
+                        <input type="button" value="la somme general de votre commande est?" (click)="displaytotal()" class="ml-3 mt-3 btn btn-success" >
+                    </tbody>
+                    
+                </table>
+                
+            </div>
+           
+        </div>
+    </div>
+  
+</div>
+
+
+
+
+
+

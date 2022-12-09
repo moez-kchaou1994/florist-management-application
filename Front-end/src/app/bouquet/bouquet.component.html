@@ -1,0 +1,81 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="modal-header">
+        <h4 class="mb-0">Liste bouquet</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="row justify-content-between">
+                    <div class="col-10">
+                        <div class="form-group mb-2">
+                            <div class="d-flex">
+                               
+                                
+                                <button type="button" class="btn btn-success  ml-2" routerLink="/addbouquet">Add bouquet</button>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table row-border hover mb-0">
+                    <thead>
+                        <tr>
+                            <th class="cell-article">
+                                Numero bouquet
+                            </th>
+                            <th class="cell-g">
+                                Nom bouquet
+                            </th>
+                            <th class="cell-date">
+                                form bouquet
+                            </th>
+                            <th class="cell-access">
+                                Prix bouquet
+                            </th>
+                            <th class="cell-agent">
+                                Taille bouquet
+                            </th>
+                            <th class="cell-view">
+                                Fleures
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="custom-scroll">
+                        <tr *ngFor="let row of b">
+                            <td class="cell-article">
+                              {{row.num_bouquet}}
+                            </td>
+                            <td class="cell-g">
+                              {{row.nom_bouquet}}
+                            </td>
+                            <td class="cell-date">
+                                {{row.form_bouquet}}
+                            </td>
+                            <td class="cell-access">
+                                {{row.prix_b}} 
+                            </td>
+                            <td class="cell-agent">
+                                {{row.taille_bouquet}} 
+                            </td>
+                            <td class="cell-view">
+                                {{row.fleurs}} 
+                                <input type="button" value="modifier" class="btn btn-warning mr-2" [routerLink] ="['/modifbouquet/',row.num_bouquet]">
+                                <input type="button" value="Supprimer" class="btn btn-danger" (click)="deletebouquet(row.num_bouquet)">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+  
+</div>
+
+
+

@@ -1,0 +1,20 @@
+.success {
+    background-color: #28a745;
+    color: white;
+}
+.warning {
+    background-color: #ffc107;
+    color: white;
+}
+.danger {
+    background-color: #dc3545;
+    color: white;
+}
+.primary {
+    background-color: #007bff;
+    color: white;
+}
+.modal-content{
+    margin-top: 200px;
+    margin-left: 520px;
+}
